@@ -2,6 +2,7 @@
 .home{
     background:color($colors, primary);
     color:color($colors, light);
+    
     margin-top:30px;
 }
 
@@ -13,21 +14,23 @@
     color:#ccc;
 }
 
+
 .temp{
     font-size: 90px;
     text-align: center;
     font-weight: normal;
 }
 
+.location {
+    text-align:center;
+}
 
 
 .icon , .desc {
     text-align: center;
 }
 
-.location {
-    text-align: center;
-}
+
 .icon img{
     widows: 100px;
 }
