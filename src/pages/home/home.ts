@@ -10,15 +10,19 @@ import { Storage } from '@ionic/storage';
 
 export class HomePage {
   weather:any;
+  
   location:{
     city:string,
-    state:string
+    state:string,
+    
   }
+
+ 
 
   constructor(
     public navCtrl: NavController, 
-    private weatherProvider:WeatherProvider,
-    private storage:Storage) {
+    public weatherProvider:WeatherProvider,
+    public storage:Storage) {
 
   }
 
@@ -34,13 +38,14 @@ export class HomePage {
       }
      
 
-      this.weatherProvider.getWeather(this.location.city, this.location.state)  .subscribe(weather => {
-          this.weather = weather.current_observation;
-        //console.log(weather);
+      this.weatherProvider.getWeather(this.location.city, this.location.state)  
+          .subscribe(result => {let weather:any = result; this.weather = weather.current_observation; console.log(this.weather); 
+        
 
         
         });
     });
   }
+  
 
 }
