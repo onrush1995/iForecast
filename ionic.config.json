@@ -1,7 +1,8 @@
 {
   "name": "iForecast",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "ionic-angular",
   "id": "97f799e7"
